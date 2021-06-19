@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 6rem;
     margin-bottom: 5rem;
     text-transform: uppercase;
     line-height: 1.2;
@@ -69,6 +69,7 @@ a {
 
 p {
     margin-bottom: 3rem;
+    font-weight: bold;
 }
 
 .main-content {
@@ -103,10 +104,10 @@ p {
 }
 
 .main-bg {
-    background-image: url(../img/main-bg.svg);
+    background-image: url(../img/test-bg.svg);
     background-size: 100%;
     background-position: center center;
-    color: var(--white-color);
+    color: #688AE8;
 }
 
 .white-bg {
@@ -194,4 +195,12 @@ p {
     gap: var(--gap);
     min-height: 100vh;
     justify-content: center;
+}
+
+.grow img {
+    transition: all 400ms ease-in-out;
+}
+
+.grow img:hover {
+    transform: scale(1.1);
 }
