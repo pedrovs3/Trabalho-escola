@@ -5,8 +5,11 @@
 }
 
 :root {
-    --primary-color: #01172F;
-    --secondary-color: #057DFF;
+    --orange: #ffa505;
+    --light-orange:#ffc905;
+    --primary-color: #264653;
+    --secondary-color: #2A9D8F;
+    --white-text: #e8e8e8;
     --light-gray-color:  #707070;
     --white-color: #fff;
     --red-color: rgb(220, 20, 60);
@@ -42,7 +45,7 @@ h1 {
 
 h2 {
     font-size: 6rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
     line-height: 1.2;
     }
@@ -65,6 +68,7 @@ h6 {
 
 a {
     text-decoration: none;
+    color: var(--primary-color);
 }
 
 p {
@@ -104,15 +108,22 @@ p {
 }
 
 .main-bg {
-    background-image: url(../img/test-bg.svg);
+    background-image: url(../img/main-bg.svg);
     background-size: 100%;
     background-position: center center;
-    color: #688AE8;
+    color:var(--white-color);
 }
 
 .white-bg {
-    background: #e8e8e8;
+    background:var(--white-color);
     color: var(--primary-color);
+}
+
+.footer-bg {
+    background-size: cover;
+    height: 5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .intro-img img {
@@ -128,7 +139,7 @@ p {
     right: 0;
     width: 100%;
     z-index: 1;
-    border-bottom: 0.1rem solid var(--light-gray-color);
+    border-bottom: 0.1rem solid var(--secondary-color);
 }
 
 .menu-content {
@@ -174,7 +185,7 @@ p {
     left: 50%;
     width: 0;
     height: 0.2rem;
-    background: var(--secondary-color);
+    background: #ffc905;
     transition: all 300ms ease-in-out;
 }
 
@@ -203,4 +214,43 @@ p {
 
 .grow img:hover {
     transform: scale(1.1);
+}
+
+.controle img {
+    height: auto;
+    width: 6rem;
+}
+
+.centralizada {
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 0.1rem solid var(--primary-color)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer {
+    align-items: center;
+    padding-top:1.2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-top: 0.1rem solid var(--orange);
 }
