@@ -247,7 +247,8 @@ p {
 
 .footer {
     align-items: center;
-    padding-top:1.2rem;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
     top: 0;
     left: 0;
     right: 0;
