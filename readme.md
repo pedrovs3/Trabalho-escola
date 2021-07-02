@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f4aa5655-a497-4e95-b64f-dbb18644e24c/deploy-status)](https://app.netlify.com/sites/trabalho-1ano-eixo/deploys)
