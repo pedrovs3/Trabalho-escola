@@ -8,45 +8,49 @@
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@300&family=Noto+Sans+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="shortcut icon" href="assets/img/favicon.ico">
+    
     <link rel="readme" href="readme.md">
+    
+    <link rel="stylesheet" href="/assets/js/index.js">
+
+   
 </head>
-<body>
+<body> 
     
-    <aside class="menu white-bg">
-        <div class="main-content menu-content">
-            <h1>
-                <div class="controle"><img src="assets/img/controle-de-video-game.png" alt="#"></div>
-            </h1>
+    <header class="menu menu-bg">
+                <div class="menu-content ">
+                        <div class="controle"><img src="assets/img/logo-icon.svg" alt="#">
+                </div>
 
-            <nav>
-                <ul>
-                    <li><a href="#intro">Início</a></li>
-                    <li><a href="#explicacao">Ideia</a></li>
-                    <li><a href="#projeto">Projeto</a></li>
-                    <li><a href="#integrantes">Participantes</a></li>
-                </ul>
-            </nav>
-        </div>
-    </aside>
-    
-    <div class="menu-spacing"></div>
-
-    <section id="intro" class="main-bg section ">
-        <div class='main-content intro-content'>
-            <div class="intro-text-content">
-                <h2>O tempo que você passa jogando realmente é saudável?</h2>
-                <p>Para encerrar dúvidas como essas, o nosso grupo decidiu fazer um website que te indique caso precise abaixar sua quantidade de horas e ainda te mostra algumas dicas para não ficar muito estressado enquanto joga!</p>
+                <nav>
+                    <ul>
+                        <li><a href="#intro">Home</a></li>
+                        <li><a href="#explicacao">Ideia</a></li>
+                        <li><a href="#projeto">Projeto</a></li>
+                        <li><a href="#integrantes">Grupo</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="intro-img grow">
-                <img src="assets/img/intro-game.svg" alt="...">
+    </header>
+
+    <section id="intro" class="main-bg section">
+        <div class='main-content-intro intro'>
+            <div></div>
+            <div class="main-content-intro">
+                <h1>O tempo que você passa jogando realmente <br>é saudável?</h1>
+                <p>Para encerrar dúvidas como essas, o nosso grupo decidiu fazer um website que te indique caso precise abaixar sua quantidade de horas e ainda te mostra algumas dicas para não ficar muito estressado enquanto joga!</p>
             </div>
         </div>
     </section>
  
-    <section id="explicacao" class="white-bg section"> 
+    <section id="explicacao" class="dark-bg section"> 
         <div class="text">
             <div class="intro-text-content ">
                 <h2>Ideia Principal</h2>
@@ -66,26 +70,71 @@
                 <h4>Estresse nos jogos</h4>
                 <p>83% dos entrevistados dizem se irritar jogando<br> Questionados sobre o grau de irritação entre 0 - 10 a média dos entrevistados foi 6</p>
             </div>
-            </div>
         </div>
     </section>
-    <section id="projeto" class="main-bg section">
-        <div class="main-content working-content">
-            <div class="intro-text-content centralizada">
-                <h2>EM PROGRESSO</h2>
-            </div>
-            <div class="intro-img">
-                <img src="/assets/img/working.svg" alt="">
-            </div>
+    <section class="footer-bg intro-text-content section">
+        <header>
+            <h2>FASES DO PROJETO</h2>
+        </header>    
+        </div>
+                <ul class="slider centralizada">
+                    <li>
+                        <input type="radio" id="slide1" name="slide" checked>
+                        
+                        <img src="/assets/img/inicio-projeto" alt="">
+                    </li>
+                    <li >
+                        <input type="radio" id="slide2" name="slide" checked>
+                        
+                        <img src="/assets/img/desenvolvimento-projeto.JPG" alt="">
+                    </li>
+                    <li >
+                        <input type="radio" id="slide3" name="slide" checked>
+                        
+                        <img src="/assets/img/auto-projeto.png" alt="">
+                    </li>
+                    <div class="gridlabel">
+                        <div><label for="slide1"></label></div>
+                        <div><label for="slide2"></label></div>
+                        <div> <label for="slide3"></label></div>
+                       
+                    </div>
+                </ul>
+    </div>
+    </section>
+    <section id="projeto" class="main-bg intro-text-content section">
+        <div class="text">
+            <div class="contact-form main-content">
+                <div id="msg" class="titulos" >
+                        <h2>Quanto tempo voce passa jogando?</h2>
+                </div>
+                <fieldset class="form-grid">
+                    <form class="form-group" name="project" data-netlify="true">
+                        <div id="" class="form-group">
+                            <input type="number" min="0" name="Number1" id="valorhoras" required>
+                        </div>
+                        <div class="form-group">
+                            <button id='botao' type="button" value="enviar" onclick="Vervalor()"> Enviar</button> 
+                        </div>
+                        <div>
+                            <button id='voltar' class="botao-invisivel" type="button" value="voltar" onclick='Voltar()'>Voltar</button> 
+                        </div>
+                    </form>
+                </fieldset>
+                <div class="main-content centralizada">
+                        <script class="projeto" src="/assets/js/index.js"></script>
+                </div>
+            </div>  
         </div>
     </section>
-    <section id='integrantes' class="white-bg section">
+    
+    <section id='integrantes' class="dark-bg section">
         <div class='main-content intro-content'>
             <div class="intro-text-content">
                 <h2>Participantes:</h2>
-                <p><a target="_blank" href="https://www.instagram.com/pedrovs23_/">Pedro Vieira 1ºB (Designer/ Front-end)</front-end></a></p>
-                <p><a target="_blank" href="https://www.instagram.com/kmr.will/">William Kermer 1ºC (Organização)</a></p>
-                <p><a target="_blank" href="https://www.instagram.com/enzo_skr15/">Enzo Prado 1ºA (Organização)</a></p>
+                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/pedrovs23_/">Pedro Vieira 1ºB (Designer/ Front-end)</a></p>
+                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/kmr.will/">William Kermer 1ºC (Organização)</a></p>
+                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/enzo_skr15/">Enzo Prado 1ºA (Organização)</a></p>
                 <p><a target="_blank" href="#">Victor Arruda 1ºA (Organização)</a></p>
                 <p><a target="_blank" href="https://www.instagram.com/gui_japo/">Guilherme Joviniano 1ºB (Back-end)</a></p>
                 <p><a target="_blank" href="#">Abraão Xavier 1ºA (Organização)</a></p>
@@ -94,13 +143,13 @@
                 
             </div>
             <div class="intro-img ">
-                <img src="assets/img/integrantes.svg" alt="...">
+                <img src="assets/img/group-image.svg" alt="...">
             </div>
         </div>
     </section>
 
-    <footer class="footer-bg">
-        <div class="centralizada footer">
+    <footer class="footer-bg footer">
+        <div class="centralizada">
             <p>Feito em 2021 Pelo grupo de psicologia e comportamento afetado pelos jogos</p>
         </div>
     </footer>
