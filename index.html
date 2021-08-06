@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trabalho Jogos</title>
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,7 +23,8 @@
    
 </head>
 <body> 
-    
+    <input id="close-menu" class="close-menu" type="checkbox" role="button" aria-label="Close menu">
+    <label class="close-menu-label" for="close-menu" title="Close Menu"></label>
     <header class="menu menu-bg">
                 <div class="menu-content ">
                         <div class="controle"><img src="assets/img/logo-icon.svg" alt="#">
@@ -43,7 +44,7 @@
     <section id="intro" class="main-bg section">
         <div class='main-content-intro intro'>
             <div></div>
-            <div class="main-content-intro">
+            <div class="main-content-intro2">
                 <h1>O tempo que você passa jogando realmente <br>é saudável?</h1>
                 <p>Para encerrar dúvidas como essas, o nosso grupo decidiu fazer um website que te indique caso precise abaixar sua quantidade de horas e ainda te mostra algumas dicas para não ficar muito estressado enquanto joga!</p>
             </div>
@@ -68,56 +69,56 @@
                 <h4>Horas de jogo</h4>
                 <p>4,16% dos questionados dizem jogar entre 0 à 30 minutos diariamente<br> 25% dizem jogar entre 1 à 2 horas<br> 37,5% dizem jogar entre 3 à 4 horas<br> 20,8% dizem jogar entre 5 à 6 horas<br> 4,16% dos questionados dizem jogar entre 6 à 8 horas todos os dias,<br> 8,3% dos questionados dizem jogar 8 horas ou mais todos os dias.</p>
                 <h4>Estresse nos jogos</h4>
-                <p>83% dos entrevistados dizem se irritar jogando<br> Questionados sobre o grau de irritação entre 0 - 10 a média dos entrevistados foi 6</p>
+                <p>83% dos entrevistados dizem se irritar jogando<br> Questionados sobre o grau de irritação entre 0 - 10 a média dos entrevistados foi 6</p><header>
+                <div class="menu-spacing"></div>
+                <div class="centralizada main-content-faces">
+                    <header>   
+                        <h2>FASES DO PROJETO</h2>
+                    </header> 
+                    <ul class="slider">
+                        <li>
+                            <input type="radio" id="slide1" name="slide" checked>
+                            
+                            <img src="/assets/img/inicio-projeto" alt="">
+                        </li>
+                        <li >
+                            <input type="radio" id="slide2" name="slide" checked>
+                            
+                            <img src="/assets/img/desenvolvimento-projeto.JPG" alt="">
+                        </li>
+                        <li >
+                            <input type="radio" id="slide3" name="slide" checked>
+                            
+                            <img src="/assets/img/auto-projeto.png" alt="">
+                        </li>
+                        <div class="gridlabel">
+                            <div><label for="slide1"></label></div>
+                            <div><label for="slide2"></label></div>
+                            <div><label for="slide3"></label></div>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <section class="footer-bg intro-text-content section">
-        <header>
-            <h2>FASES DO PROJETO</h2>
-        </header>    
-        </div>
-                <ul class="slider centralizada">
-                    <li>
-                        <input type="radio" id="slide1" name="slide" checked>
-                        
-                        <img src="/assets/img/inicio-projeto" alt="">
-                    </li>
-                    <li >
-                        <input type="radio" id="slide2" name="slide" checked>
-                        
-                        <img src="/assets/img/desenvolvimento-projeto.JPG" alt="">
-                    </li>
-                    <li >
-                        <input type="radio" id="slide3" name="slide" checked>
-                        
-                        <img src="/assets/img/auto-projeto.png" alt="">
-                    </li>
-                    <div class="gridlabel">
-                        <div><label for="slide1"></label></div>
-                        <div><label for="slide2"></label></div>
-                        <div> <label for="slide3"></label></div>
-                       
-                    </div>
-                </ul>
-    </div>
-    </section>
+
     <section id="projeto" class="main-bg intro-text-content section">
         <div class="text">
             <div class="contact-form main-content">
                 <div id="msg" class="titulos" >
                         <h2>Quanto tempo voce passa jogando?</h2>
+                        <p>Para ajudar o nosso projeto envie pressionando a tecla ENTER</p>
                 </div>
                 <fieldset class="form-grid">
                     <form class="form-group" name="project" data-netlify="true">
                         <div id="" class="form-group">
-                            <input type="number" min="0" name="Number1" id="valorhoras" required>
+                            <input type="number" min="0" name="Number1" id="valorhoras" required value="0">
                         </div>
                         <div class="form-group">
-                            <button id='botao' type="button" value="enviar" onclick="Vervalor()"> Enviar</button> 
+                            <button id='botao' type="submit" value="enviar" onclick="Vervalor(); return false"> Enviar</button> 
                         </div>
                         <div>
-                            <button id='voltar' class="botao-invisivel" type="button" value="voltar" onclick='Voltar()'>Voltar</button> 
+                            <button id='voltar' class="botao-invisivel" type="submit" value="voltar" onclick='Voltar(); return false'>Voltar</button> 
                         </div>
                     </form>
                 </fieldset>
@@ -132,14 +133,14 @@
         <div class='main-content intro-content'>
             <div class="intro-text-content">
                 <h2>Participantes:</h2>
-                <p><a target="_blank" rel="nofollow" href="https://pedro-vieira-portfolio.netlify.app/">Pedro Vieira 1ºB (Designer/ Front-end)</a></p>
-                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/kmr.will/">William Kermer 1ºC (Organização)</a></p>
-                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/enzo_skr15/">Enzo Prado 1ºA (Organização)</a></p>
-                <p><a target="_blank" href="#">Victor Arruda 1ºA (Organização)</a></p>
+                <p><a target="_blank" href="https://pedro-vieira-portfolio.netlify.app/">Pedro Vieira 1ºB (Designer/ Front-end)</a></p>
+                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/kmr.will/">William Kermer 1ºC (Texto)</a></p>
+                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/enzo_skr15/">Enzo Prado 1ºA (Texto)</a></p>
+                <p><a target="_blank" href="#">Victor Arruda 1ºA (Texto)</a></p>
                 <p><a target="_blank" href="https://www.instagram.com/gui_japo/">Guilherme Joviniano 1ºB (Back-end)</a></p>
-                <p><a target="_blank" href="#">Abraão Xavier 1ºA (Organização)</a></p>
-                <p><a target="_blank" href="https://www.instagram.com/_pietro.ozz/">Pietro Ramos 1ºE (Organização)</a></p>
-                <p><a target="_blank" href="https://www.instagram.com/guhxzy/">Gusthavo Aguiar 1ºD (Organização)</a></p>
+                <p><a target="_blank" href="#">Abraão Xavier 1ºA (Texto)</a></p>
+                <p><a target="_blank" href="https://www.instagram.com/_pietro.ozz/">Pietro Ramos 1ºE (Texto)</a></p>
+                <p><a target="_blank" href="https://www.instagram.com/guhxzy/">Gusthavo Aguiar 1ºD (Texto)</a></p>
                 
             </div>
             <div class="intro-img ">

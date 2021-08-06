@@ -28,7 +28,6 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'Noto Sans SC', sans-serif;
 font-family: 'Press Start 2P', cursive;
-
 */
 
 html {
@@ -89,10 +88,12 @@ p {
 html::-webkit-scrollbar{
     width: 1rem;
     background-color: var(--footer-color)!important;
+    
 }
 
 html::-webkit-scrollbar-thumb{
     background-color: var(--secondary-color);
+    border-radius: 100rem;
 }
 
 html::-webkit-scrollbar-track{
@@ -109,9 +110,19 @@ html::-webkit-scrollbar-track{
     padding: 10rem var(--gap);
 }
 
+.main-content-faces {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10rem var(--gap);
+}
+
 .main-content-intro {
     margin: 0 auto;
     padding: 10rem var(--gap);
+}
+
+.main-content-intro2 {
+    margin: 15rem 0;
 }
 
 .main-content-intro p {
@@ -134,13 +145,17 @@ html::-webkit-scrollbar-track{
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: var(--gap);
-    min-height: 100vh;
 }
 
-.intro-text-content, .intro-img {
+.intro-text-content{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    
+}
+
+.intro-text-content header {
+    align-items: center;
 }
 
 .intro-text-content a{
@@ -157,6 +172,7 @@ html::-webkit-scrollbar-track{
 .dark-bg {
     background: var(--dark-bg);
     color: var(--third-color);
+    min-height: 100vh;
 }
 
 .menu-bg {
@@ -184,9 +200,8 @@ html::-webkit-scrollbar-track{
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     border-bottom: 0.1rem solid var(--secondary-color);
-    max-height: 6.7rem;
 }
 
 .menu-content {
@@ -246,7 +261,6 @@ html::-webkit-scrollbar-track{
 
 .menu ul li a:hover {
     content: '';
-    
     background-color: var(--secondary-color);
     color: var(--footer-color);
     max-height: 7.5rem;
@@ -254,25 +268,7 @@ html::-webkit-scrollbar-track{
 
 .section {
     min-height: 100vh;
-    min-width: 100%;
     align-content: center;
-}
-
-.working-content {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--gap);
-    min-height: 100vh;
-    justify-content: center;
-}
-
-.grow img {
-    transition: all 400ms ease-in-out;
-}
-
-.grow img:hover {
-    transform: scale(1.1);
 }
 
 .controle img {
@@ -294,15 +290,15 @@ html::-webkit-scrollbar-track{
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: var(--transparent-dark);
+    background: var(--footer-color);
     width: 4rem;
     height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: var(--white-text);
-    border: 0.1rem solid var(--secondary-color)
+    color: var(--third-color);
+    border: 0.1rem solid var(--third-color);
 }
 
 
@@ -317,13 +313,6 @@ html::-webkit-scrollbar-track{
 .gridlabel {
     display: grid;
     grid-template-columns: repeat(3,30px);
-    justify-content: center;
-}
-
-header{
-    display: flex;
-    gap: 5rem;
-    flex-wrap: nowrap;
     justify-content: center;
 }
 
@@ -394,12 +383,19 @@ header{
     line-height: 1.2;
 }
 
+.titulos p{
+    font-family: 'Montserrat', sans-serif; 
+    margin-bottom: 3rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 .slider {
     display: block;
-    height: 40rem;
-    width: 80rem;
+    width: auto;
     margin-top: 20px;
     position: relative;
+    height: 50vh;
 }
 
 .slider li {
@@ -419,14 +415,21 @@ header{
 }
 
 .slider label {
-    background-color: var(--secondary-color);
-    bottom: 1rem;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    bottom: -5rem;
     cursor: pointer;
     display: block;
-    height:1rem;
+    height: 1.5rem;
     position: absolute;
-    width: 1rem;
-    z-index: 10;
+    width: 1.5rem;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.slider label:hover {
+    background-color: var(--secondary-color);
+    transition: all 300ms ease-in-out;
 }
 
 .slider li img {
@@ -437,10 +440,141 @@ header{
 .slider li input:checked ~ img{
     opacity: 1;
     visibility: visible;
-    z-index: 10;
-    transition:all 900ms ease-in-out;
+    z-index: 3;
+    transition:all 500ms ease-in-out;
 }
 
 .botao-invisivel {
     display: none;
 }
+
+.close-menu{
+    display: none;
+}
+
+@media (max-device-width: 800px){
+    html {
+        min-width: 100%;
+        max-width: 100%;
+        background-color: black;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.05rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    h4 {
+        font-size: 1.7rem;
+    }
+    
+    p{
+        font-size: 1.5rem;
+    }
+
+    .slider label{
+        bottom: -15rem;
+    }
+
+    .titulos{
+        font-size: 2.05rem;
+    }
+
+    .intro{
+        grid-template-columns: 1fr;
+    }
+
+    .intro-img{
+        max-width: 90%;
+    }
+
+    .main-content-intro2{
+        margin: 0;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu-content, .menu-content ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        min-height: 100%;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu-content img{
+        margin: 0;
+    }
+
+    .menu {
+        display: none;
+        border-bottom: 0;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 10;
+        top: 1rem;
+        right: 1rem;
+        background: var(--footer-color);
+        color: var(--third-color);
+        border-radius: 5px;
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .slider {
+        width: auto;
+        height: auto;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        max-width: 100vh;
+    }
+
+    .footer-bg{
+        padding-top: 0.5rem;
+    }
+
+    @media (min-width:500px){
+    .main-content-faces{
+            padding:0;
+            padding-bottom: 50rem;
+        }
+
+        .slider label{
+            bottom: -33rem;
+        }
+    }
+}
+
