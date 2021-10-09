@@ -465,6 +465,7 @@ html::-webkit-scrollbar-track{
     
     h2 {
         font-size: 2.05rem;
+        text-align: center;
     }
     
     h3 {
