@@ -375,6 +375,24 @@ html::-webkit-scrollbar-track{
     color: var(--primary-color);
 }
 
+.button {
+    display: none;
+    width: 100%;
+    align-items: center;
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.button:hover {
+    background:var(--white-color);
+    color: var(--primary-color);
+}
+
 .titulos {
     font-family: 'Press Start 2P', cursive;
     font-size: 4rem;
@@ -452,6 +470,24 @@ html::-webkit-scrollbar-track{
     display: none;
 }
 
+#msg2 button{
+    border: 2px outset var(--white-color);
+    padding: 0.5rem;
+    color: var(--white-text);
+    font-size: 2rem;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+    border-radius: 7px;
+    backdrop-filter: blur(5px);
+}
+
+#msg2 button:hover{
+    background-color: #1212129c;
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+}
+
+
 @media (max-device-width: 800px){
     html {
         min-width: 100%;
@@ -465,7 +501,6 @@ html::-webkit-scrollbar-track{
     
     h2 {
         font-size: 2.05rem;
-        text-align: center;
     }
     
     h3 {
@@ -578,4 +613,54 @@ html::-webkit-scrollbar-track{
         }
     }
 }
-
+.box-main{
+    display: grid;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1050px;
+    grid-template-columns: 100px 200px;
+    margin-left: -120px;
+    padding: 0px;
+}
+.box{
+    display: flex;
+    height: 300px;
+    font-size: 20px;
+}
+.box .front, .box .back{
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    background-color: purple;
+    backface-visibility: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 5px 30px rgba(163,61,21,0.200), 
+    0 -5px 30px rgba(115,55,212,0.200);
+    transition: transform .4s ; 
+}
+.box .back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: perspective(800px) rotateX(180deg)
+}
+.box .back p{
+    font-size: 15px;
+    margin: 10px 20px;
+    text-align: center;
+}
+.box .front img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+}
+.box:hover .front{
+    transform: perspective(800px) rotateX(180deg);
+}
+.box:hover .back{
+    border-radius: 20px 20px 0 0;
+    transform: perspective(800px) rotateX(0);
+}
