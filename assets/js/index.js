@@ -50,6 +50,7 @@ function Vervalor() {
 }
     else {
         dicas.style.display="block"
+        msg.style.color = "#FF0000"
         msg.innerHTML ="Seu uso não está saudavel!"
         button.style.display = 'block'
     }
