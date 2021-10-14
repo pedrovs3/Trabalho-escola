@@ -659,27 +659,27 @@ html::-webkit-scrollbar-track{
     .box-main{
         display: grid;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         grid-template-columns: 0;
         width: max-content;
-        margin-right: 10px;
+        margin-left: -170px;
         padding: 0px;
     }
 
     .box{
         display: flex;
-        height: 300px;
+        height: 30rem;
+        width: auto;
         font-size: 10px;
     }
     
     .box .front, .box .back{
-        width: 250px;
-        height: 50px;
-        
+        width: 35rem;
+        height: 25rem;
     }
 
-    @media (min-width:500px){
-    .main-content-faces{
+    @media (max-width:500px){
+        .main-content-faces{
             padding:0;
             padding-bottom: 50rem;
         }
@@ -687,14 +687,36 @@ html::-webkit-scrollbar-track{
         .slider label{
             bottom: -33rem;
         }
-    }
 
-    .slider img {
-        width: 25rem;
-        height: 15rem;
-    }
+        .box{
+            display: flex;
+            height: 25rem;
+            width: max-content;
+            font-size: 10px;
+        }
+        
+        .box .front, .box .back{
+            width: 25rem;
+            height: 20rem;
+        }
 
-    .slider {
-        height: min-content;
+        .box-main{
+            display: grid;
+            flex-direction: row;
+            justify-content: center;
+            grid-template-columns: 0;
+            width: max-content;
+            margin-left: -125px;
+            padding: 0px;
+        }
+
+        .slider img {
+            width: 25rem;
+            height: 15rem;
+        }
+    
+        .slider {
+            height: min-content;
+        }
     }
 }
