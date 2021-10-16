@@ -510,7 +510,7 @@ html::-webkit-scrollbar-track{
     background-color: purple;
     backface-visibility: hidden;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 30px 0px 30px 0px;
     box-shadow: 0px 5px 30px rgba(163,61,21,0.200), 
     0 -5px 30px rgba(115,55,212,0.200);
     -webkit-transition: 1s all;   
@@ -554,14 +554,13 @@ html::-webkit-scrollbar-track{
 
 }
 .box:hover .back{
-    border-radius: 20px 20px 0 0;
+    border-radius: 30px 0px 30px 0px;
     transform: perspective(800px) rotateX(0);
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
     -ms-transition-delay: 0s;
     -o-transition-delay: 0s;
     transition-delay: 0s;
-
 }
 
 
@@ -696,9 +695,13 @@ html::-webkit-scrollbar-track{
         font-size: 10px;
     }
     
+    .box p{
+        font-size: 1rem;
+    }
+    
     .box .front, .box .back{
-        width: 35rem;
-        height: 25rem;
+        width: auto;
+        height: 20rem;
     }
 
     @media (max-width:500px){
