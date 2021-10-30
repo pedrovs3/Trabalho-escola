@@ -767,5 +767,23 @@ body .container .card:nth-child(4) .face.face2 {
         .slider {
             height: min-content;
         }
+
+        #projeto .text{
+            padding: 15rem 0px;
+        }
+
+        .text .main-content{
+            padding: 1rem;
+        }
+
+        body .container .card {
+            position: relative;
+            width: 270px;
+            height: 400px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 15px;
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+       }
     }
 }

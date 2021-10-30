@@ -1,5 +1,5 @@
 var html = `
-<div class="container">
+<div class="container ">
 
   <div class="card">
     <div class="face face1">
