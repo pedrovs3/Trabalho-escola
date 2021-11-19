@@ -31,7 +31,7 @@
                 </div>
 
                 <nav>
-                    <ul>
+                    <ul onclick="getElementById('close-menu') .checked = false;">
                         <li><a href="#intro">Home</a></li>
                         <li><a href="#explicacao">Ideia</a></li>
                         <li><a href="#projeto">Projeto</a></li>
@@ -102,12 +102,16 @@
         </div>
     </section>
 
-    <section id="projeto" class="main-bg intro-text-content section">
+    <section id="projeto" class="main-bg intro-text-content">
         <div class="text">
             <div class="contact-form main-content">
                 <div id="msg" class="titulos" >
                         <h2>Quanto tempo voce passa jogando?</h2>
                         <p>Para ajudar o nosso projeto envie pressionando a tecla ENTER</p>
+                </div>
+                <div id="dicas">
+                </div>
+                <button class="button" id="dicas_button" onclick="dicaShow();">Veja algumas dicas</button>
                 </div>
                 <fieldset class="form-grid">
                     <form class="form-group" name="project" data-netlify="true">
@@ -135,10 +139,10 @@
                 <h2>Participantes:</h2>
                 <p><a target="_blank" href="https://pedro-vieira-portfolio.netlify.app/">Pedro Vieira 1ºB (Designer/ Front-end)</a></p>
                 <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/kmr.will/">William Kermer 1ºC (Organizador)</a></p>
-                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/enzo_skr15/">Enzo Prado 1ºA (Redimensão do site para mobile)</a></p>
-                <p><a target="_blank" href="#">Victor Arruda 1ºA (Ideia do projeto)</a></p>
+                <p><a target="_blank" rel="nofollow" href="https://www.instagram.com/enzo_skr15/">Enzo Prado 1ºA (Redimensão do site para Mobile)</a></p>
+                <p><a target="_blank" href="https://www.instagram.com/viarrudaa/">Victor Arruda 1ºA (Ideia do projeto)</a></p>
                 <p><a target="_blank" href="https://www.instagram.com/gui_japo/">Guilherme Joviniano 1ºB (Back-end)</a></p>
-                <p><a target="_blank" href="#">Abraão Xavier 1ºA (Não fez)</a></p>
+                <p><a target="_blank" href="#">Abraão Xavier 1ºA (Texto)</a></p>
                 <p><a target="_blank" href="https://www.instagram.com/_pietro.ozz/">Pietro Ramos 1ºE (Dicas/Texto)</a></p>
                 <p><a target="_blank" href="https://www.instagram.com/guhxzy/">Gusthavo Aguiar 1ºD (Dicas/Texto)</a></p>
                 
@@ -156,6 +160,7 @@
     </footer>
 
     <a href="#intro" class="back-to-top">ᐱ</a>
+
 
 </body>
 </html>
