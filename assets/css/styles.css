@@ -492,12 +492,13 @@ html::-webkit-scrollbar-track{
 
  body .container {
      max-width: 100vw;
-     display: grid;
+     display: flex;
+     flex-wrap: nowrap;
      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
      grid-gap: 15rem;
      margin: 0 auto;
      padding: 40px 0;
-     justify-content: left;
+     justify-content: center;
 }
  body .container .card {
      position: relative;
